@@ -12,6 +12,8 @@ public enum Color {
 		this.cadenaAMostrar = cadenaAMostrar;
 	}	
 	
-	
+	public String toString() {
+		return cadenaAMostrar;
+	}
 	
 }
