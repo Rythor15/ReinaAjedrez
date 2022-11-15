@@ -7,7 +7,7 @@ public class Reina {
 		private Posicion posicion;
 		
 		
-		
+		//Getters and Setters de las variables Color y posicion
 		public Color getColor() {
 			return color;
 		}
@@ -30,6 +30,22 @@ public class Reina {
 			posicion = new Posicion(1,'d');
 			
 		}
+		public Reina(Color color) {
+			setColor(color);
+			
+			switch (color){
+				case BLANCO:
+					posicion = new Posicion(1,'d');
+				break;
+				case NEGRO:
+					posicion = new Posicion(8,'d');
+				break;
+			}
+			
+			
+		}
+		
+		
 		
 	}
 
