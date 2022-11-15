@@ -7,18 +7,29 @@ public class Posicion {
 	private int fila;
 	private char columna;
 	
+	
+	public Posicion(int fila, char columna) {
+		setFila(fila);
+		setColumna(columna);
+	}
+	
 	//Constructor Copia
 	public Posicion(Posicion posicion) {
+		if (posicion == null) {
+			
+			throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
+			
+		}
 		fila = posicion.getFila();
 		columna = posicion.getColumna();
 	}
-
+	
 	public int getFila() {
 		return fila;
 	}
 	private void setFila(int fila) {
-		if (fila <= 0 || fila > 8) {
-			throw new IllegalArgumentException("La fila no tiene un valor adecuado");
+		if (fila < 1 || fila > 8) {
+			throw new IllegalArgumentException("ERROR: Fila no válida.");
 		}
 		this.fila = fila;
 	}
@@ -26,23 +37,15 @@ public class Posicion {
 		return columna;
 	}
 	private void setColumna(char columna) {
-		if (columna <= 'a' || columna > 'h') {
-			throw new IllegalArgumentException("La columna no tiene un valor adecuado");
+		if (columna < 'a' || columna > 'h') {
+			throw new IllegalArgumentException("ERROR: Columna no válida.");
 		}
 		this.columna = columna;
-	}
-
-	public Posicion(int fila, char columna) {
-		if (columna <= 'a' || columna > 'h' || fila <= 0 || fila > 8) {
-			throw new IllegalArgumentException("La columna o la fila introducida no tiene un valor adecuado");
-		}
-		setFila(fila);
-		setColumna(columna);
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(columna, fila);
+		return Objects.hash(fila, columna);
 	}
 
 	@Override
@@ -59,6 +62,6 @@ public class Posicion {
 	
 	@Override
 	public String toString() {
-		return String.format("fila = " + fila + " columna = " + columna);
+		return String.format("fila=" + fila + "," + " columna=" + columna);
 	}
 }
