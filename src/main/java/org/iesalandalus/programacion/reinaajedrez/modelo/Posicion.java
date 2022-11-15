@@ -16,9 +16,7 @@ public class Posicion {
 	//Constructor Copia
 	public Posicion(Posicion posicion) {
 		if (posicion == null) {
-			
 			throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
-			
 		}
 		fila = posicion.getFila();
 		columna = posicion.getColumna();
