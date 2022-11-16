@@ -98,25 +98,25 @@ public class Consola {
 			direccion = Direccion.NORTE;
 			break;
 		case 2:
-			direccion = Direccion.NORTE;
+			direccion = Direccion.NORESTE;
 			break;
 		case 3:
-			direccion = Direccion.NORTE;
+			direccion = Direccion.ESTE;
 			break;
 		case 4:
-			direccion = Direccion.NORTE;
+			direccion = Direccion.SURESTE;
 			break;
 		case 5:
-			direccion = Direccion.NORTE;
+			direccion = Direccion.SUR;
 			break;
 		case 6:
-			direccion = Direccion.NORTE;
+			direccion = Direccion.SUROESTE;
 			break;
 		case 7:
-			direccion = Direccion.NORTE;
+			direccion = Direccion.OESTE;
 			break;
 		case 8:
-			direccion = Direccion.NORTE;
+			direccion = Direccion.NOROESTE;
 			break;
 		}
 		return direccion;
