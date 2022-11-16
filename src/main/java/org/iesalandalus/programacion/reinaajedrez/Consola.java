@@ -133,4 +133,8 @@ public class Consola {
 		return pasos;
 	}
 
+	public static String despedirse() {
+		return ("Hasta luego Lucas");
+	}
+
 }
