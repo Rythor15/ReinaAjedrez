@@ -4,7 +4,6 @@ import javax.naming.OperationNotSupportedException;
 
 public class Reina {
 
-	
 		private Color color;
 		private Posicion posicion;
 		
@@ -88,8 +87,11 @@ public class Reina {
 				}
 				
 			}
-			
-			
+
+			@Override
+		public String toString() {
+			return String.format("color="+ color+", posicion=("+ posicion+")");
+		}
 			
 		}
 
