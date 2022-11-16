@@ -122,4 +122,15 @@ public class Consola {
 		return direccion;
 	}
 
+	public static int Pasos() {
+		int pasos;
+		do {
+			System.out.println("-------------------------------------");
+			System.out.println("Seleccione una opcion");
+			System.out.println("-------------------------------------");
+			pasos = Entrada.entero();
+		} while (pasos < 1 || pasos > 7);
+		return pasos;
+	}
+
 }
