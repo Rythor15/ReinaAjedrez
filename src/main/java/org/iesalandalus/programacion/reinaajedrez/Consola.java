@@ -1,6 +1,7 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
 import org.iesalandalus.programacion.reinaajedrez.modelo.Color;
+import org.iesalandalus.programacion.reinaajedrez.modelo.Direccion;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -74,4 +75,51 @@ public class Consola {
 		System.out.println("-------------------------------------");
 
 	}
+
+	public static Direccion elegirDireccion() {
+		int opcion;
+		Direccion direccion = null;
+		do {
+			System.out.println("-------------------------------------");
+			System.out.println("Seleccione una opcion");
+			System.out.println("-------------------------------------");
+			System.out.println("Opcion 1º-" + Direccion.NORTE.toString());
+			System.out.println("Opcion 2º-" + Direccion.NOROESTE.toString());
+			System.out.println("Opcion 3º-" + Direccion.ESTE.toString());
+			System.out.println("Opcion 4º-" + Direccion.SURESTE.toString());
+			System.out.println("Opcion 5º-" + Direccion.SUR.toString());
+			System.out.println("Opcion 6º-" + Direccion.SUROESTE.toString());
+			System.out.println("Opcion 7º-" + Direccion.OESTE.toString());
+			System.out.println("Opcion 8º-" + Direccion.NOROESTE.toString());
+			opcion = Entrada.entero();
+		} while (opcion < 1 || opcion > 8);
+		switch (opcion) {
+		case 1:
+			direccion = Direccion.NORTE;
+			break;
+		case 2:
+			direccion = Direccion.NORTE;
+			break;
+		case 3:
+			direccion = Direccion.NORTE;
+			break;
+		case 4:
+			direccion = Direccion.NORTE;
+			break;
+		case 5:
+			direccion = Direccion.NORTE;
+			break;
+		case 6:
+			direccion = Direccion.NORTE;
+			break;
+		case 7:
+			direccion = Direccion.NORTE;
+			break;
+		case 8:
+			direccion = Direccion.NORTE;
+			break;
+		}
+		return direccion;
+	}
+
 }
