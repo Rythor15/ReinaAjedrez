@@ -124,12 +124,10 @@ public class Consola {
 
 	public static int Pasos() {
 		int pasos;
-		do {
-			System.out.println("-------------------------------------");
-			System.out.println("Seleccione una opcion");
-			System.out.println("-------------------------------------");
-			pasos = Entrada.entero();
-		} while (pasos < 1 || pasos > 7);
+		System.out.println("-------------------------------------");
+		System.out.println("Seleccione una cantidad de pasos");
+		System.out.println("-------------------------------------");
+		pasos = Entrada.entero();
 		return pasos;
 	}
 
