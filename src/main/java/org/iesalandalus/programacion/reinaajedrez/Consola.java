@@ -54,4 +54,24 @@ public class Consola {
 		}
 
 	}
+
+	public static void mostrarMenuDirecciones() {
+		System.out.println("-------------------------------------");
+		System.out.println();
+		System.out.println("Menu incial de direcciones:");
+		System.out.println();
+		System.out.println("-------------------------------------");
+		System.out.println("");
+		System.out.println("1.- Norte");
+		System.out.println("2.- Noreste");
+		System.out.println("3.- Este");
+		System.out.println("4.- Sureste");
+		System.out.println("5.- Sur");
+		System.out.println("6.- Suroeste");
+		System.out.println("7.- Oeste");
+		System.out.println("8.- Noroeste");
+		System.out.println("");
+		System.out.println("-------------------------------------");
+
+	}
 }
