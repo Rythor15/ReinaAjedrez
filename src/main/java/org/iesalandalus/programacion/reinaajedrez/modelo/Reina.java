@@ -38,10 +38,10 @@ public class Reina {
 
 		switch (color) {
 		case BLANCO:
-			posicion = new Posicion(1, 'd');
+			setPosicion(new Posicion(1, 'd'));
 			break;
 		case NEGRO:
-			posicion = new Posicion(8, 'd');
+			setPosicion(new Posicion(8, 'd'));
 			break;
 		}
 	}
