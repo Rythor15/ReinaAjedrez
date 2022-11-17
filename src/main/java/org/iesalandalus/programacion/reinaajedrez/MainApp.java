@@ -12,12 +12,15 @@ public class MainApp {
 		switch (opcion) {
 		case 1:
 			crearReinaPorDefecto();
+			mostrarReina();
 			break;// Crear reina por defecto
 		case 2:
 			crearReinaColor();
+			mostrarReina();
 			break;// Crear reina eligiendo el color
 		case 3:
 			mover();
+			mostrarReina();
 			break;// Mover
 		case 4:
 			Consola.despedirse();
@@ -42,6 +45,15 @@ public class MainApp {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 		}
+	}
+
+	public static void mostrarReina() {
+		if (reina != null) {
+			System.out.println(reina.toString());
+		} else {
+			System.out.println("Ninguna reina ha sido creada");
+		}
+
 	}
 
 	public static void main(String[] args) {
