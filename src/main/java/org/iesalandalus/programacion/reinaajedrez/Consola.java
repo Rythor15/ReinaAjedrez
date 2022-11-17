@@ -30,11 +30,11 @@ public class Consola {
 		int opcion;
 		do {
 			System.out.println("-------------------------------------");
-			System.out.println("Seleccione una opcion");
+			System.out.println("Seleccione una opcion: ");
 			System.out.println("-------------------------------------");
 			opcion = Entrada.entero();
 		} while (opcion < 1 || opcion > 4);
-		System.out.print("Su opción escogida fue: ");
+		System.out.println("Su opción escogida fue: " + opcion);
 		return opcion;
 	}
 
