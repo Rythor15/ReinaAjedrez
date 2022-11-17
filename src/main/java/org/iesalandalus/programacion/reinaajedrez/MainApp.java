@@ -19,7 +19,10 @@ public class MainApp {
 			mostrarReina();
 			break;// Crear reina eligiendo el color
 		case 3:
-			mover();
+			try {
+				mover();
+			} catch (NullPointerException e) {
+			}
 			mostrarReina();
 			break;// Mover
 		case 4:
@@ -38,24 +41,32 @@ public class MainApp {
 
 	public static void mover() {
 		Consola.mostrarMenuDirecciones();
-		Consola.elegirDireccion();
 		try {
-			reina.mover(null, 0);
+			reina.mover(Consola.elegirDireccion(), Consola.Pasos());
 		} catch (OperationNotSupportedException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 		}
+
 	}
 
 	public static void mostrarReina() {
 		if (reina != null) {
 			System.out.println(reina.toString());
 		} else {
-			System.out.println("Ninguna reina ha sido creada");
+			System.out.println("Ninguna reina ha sido creada.");
 		}
 
 	}
 
 	public static void main(String[] args) {
+		int opcion;
+
+		do {
+			Consola.mostrarMenu();
+			opcion = Consola.elegirOpcionMenu();
+			ejecutarOpcion(opcion);
+		} while (opcion != 4);
+
 	}
 }
