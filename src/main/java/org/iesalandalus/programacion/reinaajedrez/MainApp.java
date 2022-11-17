@@ -7,7 +7,7 @@ import org.iesalandalus.programacion.reinaajedrez.modelo.Reina;
 public class MainApp {
 
 	private static Reina reina;
-
+	//Opciones para elegir
 	public static void ejecutarOpcion(int opcion) {
 		switch (opcion) {
 		case 1:
